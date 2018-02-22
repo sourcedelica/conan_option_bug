@@ -4,4 +4,4 @@ cob-client/0.1@eric/test
 cob-service/0.1@eric/test
 
 [options]
-cob-common:use_zmq=False
+cob-common:use_zmq=True

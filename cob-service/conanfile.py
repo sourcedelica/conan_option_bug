@@ -17,9 +17,11 @@ class CobConan(ConanFile):
     )
 
     # Options
-    def configure(self):
-        self.options['cob-common'].use_caf = True
-        self.options['cob-common'].use_zmq = True
+    default_options = 'cob-common:use_caf=True', 'cob-common:use_zmq=True'
+
+    # def configure(self):
+    #     self.options['cob-common'].use_caf = True
+    #     self.options['cob-common'].use_zmq = True
 
     def build(self):
         cmake = CMake(self)
