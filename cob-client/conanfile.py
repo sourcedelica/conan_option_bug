@@ -20,9 +20,9 @@ class CobConan(ConanFile):
     options = {'use_zmq_transport': [True, False]}
     default_options = 'use_zmq_transport=False', 'cob-common:use_caf=True', 'cob-common:use_zmq=False'
 
-    def configure(self):
-        self.options['cob-common'].use_caf = not self.options.use_zmq_transport
-        self.options['cob-common'].use_zmq = self.options.use_zmq_transport
+    # def configure(self):
+    #     self.options['cob-common'].use_caf = not self.options.use_zmq_transport
+    #     self.options['cob-common'].use_zmq = self.options.use_zmq_transport
 
     def build(self):
         cmake = CMake(self)
